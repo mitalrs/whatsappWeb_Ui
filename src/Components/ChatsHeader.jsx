@@ -3,9 +3,9 @@ import Dp from "../assets/profile.svg"
 
 function ChatsHeader() {
   return (
-    <div className="flex justify-center items-center flex-row">
-      <div className="grow flex w-[80%]">
-        <div className="flex justify-center items-center h-[40px] w-[30%] ">
+    <div className="flex justify-center items-center flex-row  bg-gray-200 border-r-gray-100 border-[1px]">
+      <div className="grow flex w-[90%]">
+        <div className="flex justify-center items-center h-[40px] w-[30%]">
        <img src={Dp} alt="alt" />
         </div>
         <div className="flex items-center space-x-4 w-[70%]">
