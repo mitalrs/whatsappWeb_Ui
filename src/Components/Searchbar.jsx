@@ -1,9 +1,9 @@
 import React from "react";
-
+import "../App.css";
 function Searchbar() {
   return (
-    <div className="flex items-center bg-[#ffffff] h-[49px] border-s-zinc-black  border-r-gray-200 border-[1px] p-2">
-      <div className=" h-[30px]  box-border rounded-lg px-2 bg-gray-200 flex-grow flex justify-between text-[#8696a0]">
+    <div className="flex items-center bg-[#ffffff] h-[49px] border-s-zinc-black  border-r-gray-200 p-2 border-r ">
+      <div className=" h-[30px]  box-border rounded-lg px-2 bg-gray-200 flex-grow flex justify-between text-[#54656f]">
         <button className="flex-grow flex justify-center items-center">
           <svg
             viewBox="0 0 24 24"
@@ -26,7 +26,7 @@ function Searchbar() {
         
           <input
             placeholder="Search or start new chat"
-            className=" bg-gray-200"
+            className=" bg-gray-200 text-[#54656f] text-xs"
           />
        
       </div>

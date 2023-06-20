@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import LeftComponent from "./Components/LeftComponent";
 import RightComponent from "./Components/RightComponent";
 

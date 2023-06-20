@@ -2,7 +2,7 @@ import React from 'react'
 
 function RightComponent() {
   return (
-    <div className='grow bg-[#'>RightComponent</div>
+    <div className='grow bg-gray-200'>RightComponent</div>
   )
 }
 

@@ -1,3 +1,7 @@
 #root {
 }
 
+input::placeholder{
+    color:#f50000;
+}
+
