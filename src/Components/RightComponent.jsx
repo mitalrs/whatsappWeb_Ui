@@ -1,11 +1,13 @@
 import React from "react";
-import profile from "../assets/profile.svg";
+import Chatbg from "../assets/whatsapp-bg.png";
+import RecievedChatMessage from "./RecievedChatMessage";
+import SendedChatMessage from "./SendedChatMessage";
 
 function RightComponent() {
   return (
-    <div className="grow flex flex-col">
+    <div className="grow flex flex-col relative">
       {/* header */}
-      <div className="flex justify-between items-center h-[59px] w-full bg-gray-200 px-4">
+      <div className="flex absolute top-0 justify-between items-center h-[59px] w-full bg-gray-200 px-4">
         <div className="w-[11%] h-[40px]">
           <img
             src="https://www.unigreet.com/wp-content/uploads/2023/03/Cute-Cat-Whatsapp-Dp-HD-781x1024.jpg"
@@ -55,10 +57,18 @@ function RightComponent() {
       </div>
 
       {/* chat */}
-      <div className="flex-grow bg-slate-500">user chat</div>
+      <div className="flex-grow flex-col mt-[59px] mb-[62px] overflow-y-auto bg-[#efeae2]" style={{
+        backgroundImage: `url(${Chatbg})`
+      }}>
+        <SendedChatMessage />
+        <RecievedChatMessage />
+
+        <h1>h1</h1> <h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>h1</h1><h1>end of the cha</h1>
+        
+      </div>
 
       {/* typing */}
-      <div className="flex h-[62px] items-center px-4 bg-[#f0f2f5]">
+      <div className="flex absolute bottom-0 h-[62px] w-full items-center px-4 bg-[#f0f2f5]">
         <div className="w-[40px] h-[40px] flex justify-center items-center">
           <button>
             <svg
