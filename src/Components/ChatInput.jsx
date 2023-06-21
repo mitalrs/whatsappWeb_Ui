@@ -59,7 +59,7 @@ function ChatInput() {
         />
       </div>
       <div className="w-[40px] h-[40px] flex justify-center items-center ml-2">
-        {!message.length ? (
+        {/* {!message.length ? (
           <button>
             <svg
               viewBox="0 0 24 24"
@@ -79,7 +79,7 @@ function ChatInput() {
               ></path>
             </svg>
           </button>
-        ) : (
+        ) : ( */}
           <button>
             <svg
               viewBox="0 0 24 24"
@@ -99,7 +99,7 @@ function ChatInput() {
               ></path>
             </svg>
           </button>
-        )}
+        {/* )} */}
       </div>
     </div>
   );

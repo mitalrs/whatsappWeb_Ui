@@ -8,7 +8,7 @@ function ChatMessageComponent({ type, message, time }) {
       {/* recieved message */}
 
       {
-        <div className={`flex flex-row m-2 ${isSent && "justify-end"}`}>
+        <div className={`flex flex-row m-4 ${isSent && "justify-end"}`}>
           {!isSent && (
             <span className="h-[2%] text-white">
               <svg
@@ -36,7 +36,7 @@ function ChatMessageComponent({ type, message, time }) {
             </span>
           )}
           <div
-            className={`rounded-r-lg rounded-bl-lg flex-col  flex pt-[6px] pr-[7px] pb-[8px] pl-[9px] ${
+            className={`rounded-r-lg rounded-bl-lg flex-col  flex pt-[6px] max-w-md  pr-[7px] pb-[8px] pl-[9px] ${
               isSent ? "bg-[#c8fdc8]" : "bg-white "
             }`}
           >
