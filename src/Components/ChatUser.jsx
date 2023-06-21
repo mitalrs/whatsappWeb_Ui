@@ -1,7 +1,7 @@
 import React from "react";
 import profile from "../assets/profile.svg";
 
-function ChatUser() {
+function ChatUser(user, message, type, time, img) {
   return (
     <div className="flex h-[72px] ">
       <div className="p-4 flex items-center justify-center">
