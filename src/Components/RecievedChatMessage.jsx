@@ -20,12 +20,12 @@ function RecievedChatMessage() {
             height="13"
             width="8"
             preserveAspectRatio="xMidYMid meet"
-            class=""
+            className=""
             version="1.1"
             x="0px"
             y="0px"
-            enable-background="new 0 0 8 13"
-            xml:space="preserve"
+            enableBackground="new 0 0 8 13"
+            xmlSpace="preserve"
           >
             <path
               opacity="0.13"
