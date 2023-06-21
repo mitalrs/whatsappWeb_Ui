@@ -28,9 +28,15 @@ function SendedChatMessage() {
             ></path>
           </svg>
         </span>
-        <div className="rounded-r-lg rounded-bl-lg bg-white flex p-1">
-          <div className="text-[#111b21]">msg</div>
-          <div className="text-[#667781] text-[10px] flex items-end ml-2 font-normal">15:23</div>
+        <div className="rounded-r-lg rounded-bl-lg flex-col bg-white flex pt-[6px] pr-[7px] pb-[8px] pl-[9px]">
+          <div className="flex">
+            <span className="text-[#111b21] text-[14.2px]">msg</span>
+            <span className="px-[4px] w-[54px]"></span>
+          </div>
+          <div className="flex items-end justify-end  float-right mb-[-5px] mt-[-10px]">
+            <div className="font-normal text-[#667781] text-[11px]">15:23</div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>

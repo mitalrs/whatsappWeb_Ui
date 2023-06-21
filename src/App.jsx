@@ -9,7 +9,7 @@ function App() {
         <div className="bg-[#00a884] h-[30%] w-full absolute top-0 -z-10"></div>
         <div className=" bg-gray-200 h-[70%] w-full absolute bottom-0 -z-10"></div>
 
-        <div className="flex 2xl:w-[1600px] 2xl:h-[96%] h-screen w-screen bg-white">
+        <div className="flex 2xl:w-[1600px] 2xl:h-[96%] h-screen w-screen bg-white min-w-[748px]">
           <LeftComponent />
           <RightComponent />
         </div>
