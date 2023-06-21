@@ -6,7 +6,7 @@ function ChatsHeader() {
     <div className="flex justify-center items-center flex-row  bg-gray-200 border-r-gray-300 border-[1px] h-[59px]">
       <div className="grow flex w-[90%] p-4">
         <div className="flex items-center h-[40px] w-[60%]">
-          <img src={Dp} alt="alt" />
+          <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="alt" className="h-[40px] w-[40px] rounded-full"/>
         </div>
         <div className="flex items-center justify-between w-[70%]">
           <div className="">
