@@ -3,14 +3,14 @@ import "../App.css";
 function Searchbar() {
   return (
     <div className="flex items-center bg-[#ffffff] h-[49px] border-s-zinc-black  border-r-gray-200 p-2 border-r ">
-      <div className=" h-[30px]  box-border rounded-lg px-2 bg-gray-200 flex-grow flex justify-between text-[#54656f]">
-        <button className="flex-grow flex justify-center items-center">
+      <div className=" h-[35px]  box-border rounded-lg px-2 bg-gray-200 flex-grow flex justify-between text-[#54656f]">
+        <button className="flex justify-center items-center">
           <svg
             viewBox="0 0 24 24"
             height="24"
             width="24"
             preserveAspectRatio="xMidYMid meet"
-            className=""
+            className="mr-9"
             version="1.1"
             x="0px"
             y="0px"
@@ -26,7 +26,7 @@ function Searchbar() {
         
           <input
             placeholder="Search or start new chat"
-            className=" bg-gray-200 text-[#54656f] text-xs"
+            className=" bg-gray-200 text-[#54656f] text-sm flex-grow"
           />
        
       </div>
@@ -36,7 +36,7 @@ function Searchbar() {
           height="20"
           width="20"
           preserveAspectRatio="xMidYMid meet"
-          className=""
+          className="text-[#54656f]"
           version="1.1"
           x="0px"
           y="0px"

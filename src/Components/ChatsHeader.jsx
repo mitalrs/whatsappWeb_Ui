@@ -1,21 +1,21 @@
 import React from "react";
-import Dp from "../assets/profile.svg"
+import Dp from "../assets/profile.svg";
 
 function ChatsHeader() {
   return (
     <div className="flex justify-center items-center flex-row  bg-gray-200 border-r-gray-300 border-[1px] h-[59px]">
-      <div className="grow flex w-[90%]">
-        <div className="flex justify-center items-center h-[40px] w-[30%]">
-       <img src={Dp} alt="alt" />
+      <div className="grow flex w-[90%] p-4">
+        <div className="flex items-center h-[40px] w-[60%]">
+          <img src={Dp} alt="alt" />
         </div>
-        <div className="flex items-center space-x-4 w-[70%]">
-          <div>
+        <div className="flex items-center justify-between w-[70%]">
+          <div className="">
             <svg
               viewBox="0 0 28 28"
               height="28"
               width="28"
               preserveAspectRatio="xMidYMid meet"
-              className=""
+              className="text-[#54656f]"
               fill="none"
             >
               <path
@@ -32,7 +32,7 @@ function ChatsHeader() {
               height="24"
               width="24"
               preserveAspectRatio="xMidYMid meet"
-              className=""
+              className="text-[#54656f]"
               version="1.1"
               id="df9d3429-f0ef-48b5-b5eb-f9d27b2deba6"
               x="0px"
@@ -56,7 +56,7 @@ function ChatsHeader() {
               height="24"
               width="24"
               preserveAspectRatio="xMidYMid meet"
-              className=""
+              className="text-[#54656f]"
               version="1.1"
               x="0px"
               y="0px"
@@ -76,7 +76,7 @@ function ChatsHeader() {
               height="24"
               width="24"
               preserveAspectRatio="xMidYMid meet"
-              className=""
+              className="text-[#54656f]"
               version="1.1"
               x="0px"
               y="0px"
