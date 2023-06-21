@@ -102,7 +102,7 @@ function RightComponent() {
           </button>
         </div>
         <div className="flex flex-grow ml-2 items-center h-[65%]  rounded-md bg-white px-4 py-2.5">
-          <input type="text" className="font-normal text-[#3b4a54] text-sm  w-[100%] h-[100%]"/>
+          <input type="text" placeholder="Type a message" className="font-normal text-[#3b4a54] text-sm  w-[100%] h-[100%]"/>
         </div>
         <div className="w-[40px] h-[40px] flex justify-center items-center ml-2">
           <button>

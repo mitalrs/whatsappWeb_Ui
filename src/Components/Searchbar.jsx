@@ -30,7 +30,7 @@ function Searchbar() {
           />
        
       </div>
-      <button className="p-4">
+      <button className="p-2 ml-1">
         <svg
           viewBox="0 0 24 24"
           height="20"
