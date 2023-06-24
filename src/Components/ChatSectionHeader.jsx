@@ -1,16 +1,25 @@
-import React from "react";
+import React, {useContext} from "react";
+import { GlobalContext } from "../App";
 
 function ChatSectionHeader() {
+  const { showLeft, toggle} = useContext(GlobalContext);
+
   return (
     <div className="flex absolute top-0 justify-between items-center h-[59px] w-full bg-gray-200 px-4">
-      <div className="w-[11%] h-[40px]">
+      <div className="w-[25%] h-[40px] md:w-[11%] flex justify-center items-center">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/109/109618.png"
+          alt="back"
+          className="h-[20px] w-[20px] md:hidden md:h-[0px] md:w-[0px]"
+          onClick={toggle}
+        />
         <img
           src="https://www.unigreet.com/wp-content/uploads/2023/03/Cute-Cat-Whatsapp-Dp-HD-781x1024.jpg"
           alt=""
-          className="w-[40px] h-[40px] rounded-full"
+          className="w-[40px] h-[40px] rounded-full m-2"
         />
       </div>
-      <div className="flex flex-grow ">userName</div>
+      <div className="flex flex-grow">userName</div>
       {/* <div className="w-[40px] h-[40px] flex justify-center items-center ml-4">
         <svg
           viewBox="0 0 24 24"

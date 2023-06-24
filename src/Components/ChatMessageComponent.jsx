@@ -36,7 +36,7 @@ function ChatMessageComponent({ type, message, time }) {
             </span>
           )}
           <div
-            className={`rounded-r-lg rounded-bl-lg flex-col  flex pt-[6px] max-w-md  pr-[7px] pb-[8px] pl-[9px] ${
+            className={`rounded-r-lg rounded-bl-lg flex-col  flex pt-[6px] md:max-w-2xl  pr-[7px] pb-[8px] pl-[9px] ${
               isSent ? "bg-[#c8fdc8]" : "bg-white "
             }`}
           >

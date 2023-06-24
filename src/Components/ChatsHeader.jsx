@@ -3,8 +3,8 @@ import Dp from "../assets/profile.svg";
 
 function ChatsHeader() {
   return (
-    <div className="flex justify-center items-center flex-row  bg-gray-200 border-r-gray-300 border-[1px] h-[59px]">
-      <div className="grow flex w-[90%] p-4">
+    <div className="flex justify-center items-center w-full flex-row  bg-gray-200 border-r-gray-300 border-[1px] h-[59px]">
+      <div className="grow flex p-4">
         <div className="flex items-center h-[40px] w-[60%]">
           <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="alt" className="h-[40px] w-[40px] rounded-full"/>
         </div>

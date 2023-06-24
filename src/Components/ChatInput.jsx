@@ -4,7 +4,7 @@ function ChatInput() {
   const [message, setMessage] = useState("");
 
   return (
-    <div className="flex absolute bottom-0 h-[62px] w-full items-center px-4 bg-[#f0f2f5]">
+    <div className="flex absolute bottom-0 h-[62px] md:w-full items-center px-4 bg-[#f0f2f5]">
       <div className="w-[40px] h-[40px] flex justify-center items-center">
         <button>
           <svg
