@@ -1,14 +1,25 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Dp from "../assets/profile.svg";
+import { GlobalContext } from "../App";
+import { Menu, Transition } from "@headlessui/react";
+
+function dropDown(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 function ChatsHeader() {
   return (
     <div className="flex justify-center items-center w-full flex-row  bg-gray-200 border-r-gray-300 border-[1px] h-[59px]">
       <div className="grow flex p-4">
         <div className="flex items-center h-[40px] w-[60%]">
-          <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="alt" className="h-[40px] w-[40px] rounded-full"/>
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg"
+            alt="alt"
+            className="h-[40px] w-[40px] rounded-full"
+          />
         </div>
         <div className="flex items-center justify-end w-[70%]">
+          {/* extra icons */}
           {/* <div className="">
             <svg
               viewBox="0 0 28 28"
@@ -70,24 +81,124 @@ function ChatsHeader() {
               ></path>
             </svg>
           </div> */}
+
+          {/* chatList more icon */}
           <div>
-            <svg
-              viewBox="0 0 24 24"
-              height="24"
-              width="24"
-              preserveAspectRatio="xMidYMid meet"
-              className="text-[#54656f]"
-              version="1.1"
-              x="0px"
-              y="0px"
-              enableBackground="new 0 0 24 24"
-              xmlSpace="preserve"
-            >
-              <path
-                fill="currentColor"
-                d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z"
-              ></path>
-            </svg>
+            <Menu as="div" className="relative inline-block">
+              <div>
+                <Menu.Button className="inline-flex w-full justify-center rounded-full bg-gray-200 px-2 py-2 text-sm active:bg-[#c4c9cc]">
+                  <svg
+                    viewBox="0 0 24 24"
+                    height="24"
+                    width="24"
+                    preserveAspectRatio="xMidYMid meet"
+                    className="text-[#54656f]"
+                    version="1.1"
+                    x="0px"
+                    y="0px"
+                    enableBackground="new 0 0 24 24"
+                    xmlSpace="preserve"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z"
+                    ></path>
+                  </svg>
+                </Menu.Button>
+              </div>
+
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="py-1">
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="#"
+                          className={dropDown(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Select chat
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="#"
+                          className={dropDown(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          New group
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="#"
+                          className={dropDown(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          New community
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <Menu.Item>
+                      {({ active }) => (
+                        <a
+                          href="#"
+                          className={dropDown(
+                            active
+                              ? "bg-gray-100 text-gray-900"
+                              : "text-gray-700",
+                            "block px-4 py-2 text-sm"
+                          )}
+                        >
+                          Settings
+                        </a>
+                      )}
+                    </Menu.Item>
+                    <form method="POST" action="#">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button
+                            type="submit"
+                            className={dropDown(
+                              active
+                                ? "bg-gray-100 text-gray-900"
+                                : "text-gray-700",
+                              "block w-full px-4 py-2 text-left text-sm"
+                            )}
+                          >
+                            Log out
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </form>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </Menu>
           </div>
         </div>
       </div>

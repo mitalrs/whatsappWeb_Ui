@@ -28,7 +28,7 @@ function ChatMessageComponent({ type, message, time }) {
                   fill="#0000000"
                   d="M1.533,3.568L8,12.193V1H2.812 C1.042,1,0.474,2.156,1.533,3.568z"
                 ></path>
-                <path
+                <pathd 
                   fill="currentColor"
                   d="M1.533,2.568L8,11.193V0L2.812,0C1.042,0,0.474,1.156,1.533,2.568z"
                 ></path>
@@ -36,7 +36,7 @@ function ChatMessageComponent({ type, message, time }) {
             </span>
           )}
           <div
-            className={`rounded-r-lg rounded-bl-lg flex-col  flex pt-[6px] md:max-w-2xl  pr-[7px] pb-[8px] pl-[9px] ${
+            className={`rounded-r-lg rounded-bl-lg flex-col  flex pt-[6px] max-w-sm md:max-w-2xl  pr-[7px] pb-[8px] pl-[9px] ${
               isSent ? "bg-[#c8fdc8]" : "bg-white "
             }`}
           >
