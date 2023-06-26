@@ -2,20 +2,35 @@ import React from "react";
 // import ArchivedBar from "./ArchivedBar";
 import ChatUser from "./ChatUser";
 import { useInfiniteQuery } from "@tanstack/react-query";
+import { useInView } from "react-intersection-observer";
 
 function ChatList() {
-  const { fetchNextPage, isLoading, isFetchingNextPage, error, data } =
-    useInfiniteQuery({
-      queryKey: ["usersData"],
-      queryFn: ({ pageParam = "https://swapi.dev/api/people/?page=1" }) => {
-        console.log({pageParam});
-       return fetch(pageParam).then((res) => res.json());
-      },
-      getNextPageParam: (lastPage, allPages) => {
-        console.log(lastPage.next);
-        return lastPage.next;
-      },
-    });
+  const { ref, inView } = useInView();
+
+  const {
+    fetchNextPage,
+    hasNextPage,
+    isLoading,
+    isFetchingNextPage,
+    error,
+    data,
+  } = useInfiniteQuery({
+    queryKey: ["usersData"],
+    queryFn: async ({ pageParam = "https://swapi.dev/api/people/?page=1" }) => {
+      console.log({ pageParam });
+      return await fetch(pageParam).then((res) => res.json());
+    },
+    getNextPageParam: (lastPage, allPages) => {
+      console.log(lastPage.next);
+      return lastPage.next;
+    },
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      fetchNextPage();
+    }
+  }, [inView]);
 
   if (isLoading) return "Loading...";
 
@@ -25,7 +40,7 @@ function ChatList() {
 
   // const users = [
   //   {l
-  //     userName: "userOne",  
+  //     userName: "userOne",
   //     lastMessege: "how's u?",
   //     type: "sent",
   //     time: "13:09",
@@ -95,11 +110,17 @@ function ChatList() {
         });
       })}
 
-      {isFetchingNextPage ? (
-        "Loading"
-      ) : (
-        <button onClick={fetchNextPage}>load More</button>
-      )}
+      <button
+        ref={ref}
+        onClick={() => fetchNextPage()}
+        disabled={!hasNextPage || isFetchingNextPage}
+      >
+        {isFetchingNextPage
+          ? "Loading more..."
+          : hasNextPage
+          ? "Load Newer"
+          : "Nothing more to load"}
+      </button>
     </div>
   );
 }
